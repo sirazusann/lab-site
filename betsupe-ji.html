@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おろのしあわせラボ</title>
     <style>
-        /* Google Fontsのインポート */
         @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
-
         body {
             margin: 0;
             padding: 0;
             font-size: 16px;
-            font-family: 'M PLUS Rounded 1c', sans-serif; /* すべての文字に適用 */
-            color: white; /* すべての文字を白に */
-            background-image: url("無題862_20250315032435.png"); /* 固定背景画像 */
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            color: white;
+            background-image: url("無題862_20250315032435.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* スクロールしない */
-            min-height: 150vh; /* スクロールを発生させる */
+            background-attachment: fixed;
+            min-height: 150vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -27,53 +25,53 @@
         .content {
             text-align: center;
             padding: 20px;
-            max-width: 800px; /* 中央寄せの幅制限 */
+            max-width: 800px;
             width: 100%;
         }
         .title-image {
-            width: 50%; /* 中央に配置 */
-            margin: 20px auto; /* 上と下に余白 */
+            width: 50%;
+            margin: 20px auto;
         }
         .text {
-            font-size: 1.5em; /* やや大きめ */
-            margin: 40px 0; /* 文の上下に隙間 */
+            font-size: 1.5em;
+            margin: 40px 0;
             text-align: center;
         }
         .nav-links {
             text-align: left;
             margin: 20px 0;
         }
-.nav-links a {
-    font-size: 1em; /* 中くらい */
-    margin-right: 30px; /* 等間隔 */
-    text-decoration: none;
-}
-.nav-links .top {
-    color: yellow; /* トップを黄色 */
-    text-decoration: underline; /* アンダーライン */
-}
-.nav-links .utensil {
-    color: cyan; /* 器紹介を水色 */
-    text-decoration: underline; /* アンダーライン */
-}
-.nav-links .facility {
-    color: red; /* 施設紹介を赤 */
-    text-decoration: underline; /* アンダーライン */
-}
+        .nav-links a {
+            font-size: 1em;
+            margin-right: 30px;
+            text-decoration: none;
+        }
+        .nav-links .top {
+            color: yellow;
+            text-decoration: underline;
+        }
+        .nav-links .utensil {
+            color: cyan;
+            text-decoration: underline;
+        }
+        .nav-links .facility {
+            color: red;
+            text-decoration: underline;
+        }
         .side-image {
-            width: 200px; /* サイズ調整 */
+            width: 200px;
             position: absolute;
             right: 20px;
-            top: 300px; /* 初期位置 */
-            animation: slideUp 1s ease-out forwards; /* 下から出現アニメーション */
+            top: 300px;
+            animation: slideUp 1s ease-out forwards;
         }
         @keyframes slideUp {
             from {
-                transform: translateY(100px); /* 下から開始 */
+                transform: translateY(100px);
                 opacity: 0;
             }
             to {
-                transform: translateY(0); /* 元の位置 */
+                transform: translateY(0);
                 opacity: 1;
             }
         }
@@ -83,39 +81,30 @@
             margin: 20px 0;
         }
         .bottom-images img {
-            width: 200px; /* サイズ調整 */
+            width: 200px;
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <!-- タイトル画像（水色） -->
         <img src="無題792_20250215192042.png" alt="タイトル画像" class="title-image">
-
-        <!-- 文（紫） -->
         <div class="text">
             ようこそ！おろのしあわせラボへ！<br>
             このサイトはボクのラボの紹介ページだよ！
         </div>
-
-        <!-- ナビゲーションリンク（赤/オレンジ/青） -->
         <div class="nav-links">
-    <a href="#.html" class="top" target="_blank">トップ</a>
-    <a href="betsupe-ji2.html" class="utensil" target="_blank">器紹介</a>
-    <a href="betsupe-ji3.html" class="facility" target="_blank">施設紹介</a>
-</div>
-
-        <!-- サイド画像（黄緑） -->
-        <img src="無題490_20250315134121.PNG" alt="サイド画像" class="side-image">
+            <a href="usope-ji.html" class="top" target="_blank">トップ</a>
+            <a href="betsupe-ji2.html" class="utensil" target="_blank">器紹介</a>
+            <a href="betsupe-ji3.html" class="facility" target="_blank">施設紹介</a>
+        </div>
+        <img src="side-image.png" alt="サイド画像" class="side-image">
     </div>
-
-    <!-- ボトム画像（ピンク/黄色） -->
     <div class="bottom-images">
         <a href="https://x.com/huoneolo?s=21" target="_blank">
-            <img src="無題492_20250315135730.PNG" alt="ピンク画像">
+            <img src="bottom-image1.png" alt="ピンク画像">
         </a>
         <a href="https://www.youtube.com/@olo_huone" target="_blank">
-            <img src="無題492_20250315140058.PNG" alt="黄色画像">
+            <img src="bottom-image2.png" alt="黄色画像">
         </a>
     </div>
 </body>
