@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>器紹介</title>
     <style>
-        /* Google Fontsのインポート */
         @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
-
         body {
             margin: 0;
             padding: 0;
@@ -45,16 +43,16 @@
         }
         .nav-links a {
             font-size: 1em;
-            text-decoration: underline; /* アンダーラインを追加 */
+            text-decoration: underline;
         }
         .nav-links a.top {
-            color: yellow; /* トップを黄色 */
+            color: yellow;
         }
         .nav-links a.utensil {
-            color: cyan; /* 器紹介を水色 */
+            color: cyan;
         }
         .nav-links a.facility {
-            color: red; /* 施設紹介を赤 */
+            color: red;
         }
         .text {
             font-size: 1.5em;
@@ -99,7 +97,6 @@
             margin-top: 5px;
             cursor: pointer;
         }
-        /* モーダルスタイル */
         .modal {
             display: none;
             position: fixed;
@@ -141,84 +138,69 @@
 </head>
 <body>
     <div class="content">
-        <!-- タイトル画像（水色） -->
         <img src="無題792_20250215192042.png" alt="タイトル画像" class="title-image">
-
-        <!-- ナビゲーションリンク（赤/オレンジ/青） -->
         <div class="nav-links">
             <a href="betsupe-ji.html" class="top" target="_blank">トップ</a>
             <a href="#" class="utensil" target="_blank">器紹介</a>
             <a href="betsupe-ji3.html" class="facility" target="_blank">施設紹介</a>
         </div>
-
-        <!-- 文（紫） -->
         <div class="text">
             幸せのために協力してくれる、器のみんなの紹介だよ！<br>
             画像または器物番号をクリックすると、詳しい紹介が見れるよ！
         </div>
-
-        <!-- メインセクション（赤とオレンジ） -->
         <div class="main-section">
-            <!-- メイン画像（赤） -->
-            <img src="無題493_20250315160016.png" alt="画像00" class="main-image" onclick="showModal('無題774_20250206125812.png')">
-
-            <!-- サイド文（オレンジ） -->
+            <img src="main-image.png" alt="画像00" class="main-image" onclick="showModal('modal1.png')">
             <div class="side-text">
                 ボクはおろ！ボクは器じゃなくて、器のみんなを作ったんだ！詳しい説明は画像をクリックしてね！
             </div>
         </div>
-
-        <!-- ギャラリー（緑の四角） -->
         <div class="gallery">
             <div class="gallery-item">
-                <img src="無題493_20250315154836.png" alt="画像10" onclick="showModal('無題780_20250205211645.png')">
-                <div class="number" onclick="showModal('無題780_20250205211645.png')">器物番号1</div>
+                <img src="gallery1.png" alt="画像10" onclick="showModal('modal2.png')">
+                <div class="number" onclick="showModal('modal2.png')">器物番号1</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315154938.png" alt="画像20" onclick="showModal('無題781_20250205213941.png')">
-                <div class="number" onclick="showModal('無題781_20250205213941.png')">器物番号2</div>
+                <img src="gallery2.png" alt="画像20" onclick="showModal('modal3.png')">
+                <div class="number" onclick="showModal('modal3.png')">器物番号2</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155035.png" alt="画像30" onclick="showModal('無題774_20250206000739.png')">
-                <div class="number" onclick="showModal('無題774_20250206000739.png')">器物番号3</div>
+                <img src="gallery3.png" alt="画像30" onclick="showModal('modal4.png')">
+                <div class="number" onclick="showModal('modal4.png')">器物番号3</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155155.png" alt="画像40" onclick="showModal('無題774_20250206003359.png')">
-                <div class="number" onclick="showModal('無題774_20250206003359.png')">器物番号4</div>
+                <img src="gallery4.png" alt="画像40" onclick="showModal('modal5.png')">
+                <div class="number" onclick="showModal('modal5.png')">器物番号4</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155322.png" alt="画像50" onclick="showModal('無題774_20250206212341.png')">
-                <div class="number" onclick="showModal('無題774_20250206212341.png')">器物番号5</div>
+                <img src="gallery5.png" alt="画像50" onclick="showModal('modal6.png')">
+                <div class="number" onclick="showModal('modal6.png')">器物番号5</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155423.png" alt="画像60" onclick="showModal('無題774_20250206212352.png')">
-                <div class="number" onclick="showModal('無題774_20250206212352.png')">器物番号6</div>
+                <img src="gallery6.png" alt="画像60" onclick="showModal('modal7.png')">
+                <div class="number" onclick="showModal('modal7.png')">器物番号6</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155526.png" alt="画像70" onclick="showModal('無題782_20250208185332.png')">
-                <div class="number" onclick="showModal('無題782_20250208185332.png')">器物番号7</div>
+                <img src="gallery7.png" alt="画像70" onclick="showModal('modal8.png')">
+                <div class="number" onclick="showModal('modal8.png')">器物番号7</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155615.png" alt="画像80" onclick="showModal('無題774_20250206223238.png')">
-                <div class="number" onclick="showModal('無題774_20250206223238.png')">器物番号8</div>
+                <img src="gallery8.png" alt="画像80" onclick="showModal('modal9.png')">
+                <div class="number" onclick="showModal('modal9.png')">器物番号8</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155730.png" alt="画像90" onclick="showModal('無題774_20250206212357.png')">
-                <div class="number" onclick="showModal('無題774_20250206212357.png')">器物番号9</div>
+                <img src="gallery9.png" alt="画像90" onclick="showModal('modal10.png')">
+                <div class="number" onclick="showModal('modal10.png')">器物番号9</div>
             </div>
             <div class="gallery-item">
-                <img src="無題493_20250315155826.png" alt="画像100" onclick="showModal('無題774_20250207214251.png')">
-                <div class="number" onclick="showModal('無題774_20250207214251.png')">器物番号10</div>
+                <img src="gallery10.png" alt="画像100" onclick="showModal('modal11.png')">
+                <div class="number" onclick="showModal('modal11.png')">器物番号10</div>
             </div>
         </div>
     </div>
-
-    <!-- モーダル -->
     <div id="modal" class="modal">
         <span class="back" onclick="closeModal()">戻る</span>
         <img id="modal-image" class="modal-content" src="" alt="モーダル画像">
     </div>
-
     <script>
         function showModal(imageSrc) {
             const modal = document.getElementById('modal');
