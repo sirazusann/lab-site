@@ -42,7 +42,7 @@
             text-align: center;
         }
         .nav-links {
-            margin: 20px 0;
+            margin: 20px 0 60px 0; /* 下部に大きめの余白 */
         }
         .nav-links a {
             font-size: 1em;
@@ -62,8 +62,9 @@
             text-decoration: underline;
         }
         .side-image {
-            width: 200px;
-            margin: 20px auto; /* 中央に配置 */
+            width: 100%;
+            max-width: 400px; /* 700pxから縮小して余白に収まるように */
+            margin: 0 auto; /* 上下のマージンを0にして余白内に収める */
             animation: slideUp 1s ease-out forwards;
         }
         @keyframes slideUp {
@@ -80,13 +81,12 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            margin: 20px 0;
+            margin: 60px 0 20px 0; /* 上部に大きめの余白 */
             width: 100%;
             max-width: 800px;
         }
         .bottom-images img {
             width: 200px;
-            max-width: 45%;
             margin: 10px;
         }
 
@@ -97,13 +97,19 @@
             }
             .nav-links {
                 text-align: center;
+                margin-bottom: 80px; /* PCではさらに余白を増やす */
             }
             .nav-links a {
                 display: inline-block; /* 横並び */
             }
             .side-image {
-                width: 200px;
-                margin: 20px auto;
+                max-width: 400px; /* PCでも収まるサイズ */
+            }
+            .bottom-images {
+                margin-top: 80px; /* PCではさらに余白を増やす */
+            }
+            .bottom-images img {
+                width: 200px; /* 元のサイズ */
             }
         }
 
@@ -114,14 +120,21 @@
             }
             .nav-links {
                 text-align: center;
+                margin-bottom: 40px; /* スマホでも余白を確保 */
             }
             .nav-links a {
                 display: block; /* 縦並び */
                 margin: 10px 0;
             }
             .side-image {
-                width: 150px; /* スマホで少し小さく */
-                margin: 20px auto;
+                max-width: 300px; /* スマホではさらに小さく */
+            }
+            .bottom-images {
+                margin-top: 40px; /* スマホでも余白を確保 */
+            }
+            .bottom-images img {
+                width: 150px; /* スマホでは少し小さく */
+                max-width: 45%;
             }
         }
     </style>
