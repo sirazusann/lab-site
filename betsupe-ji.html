@@ -44,9 +44,8 @@
         .nav-links {
             margin: 20px 0 80px 0; /* 下部に大きめの余白 */
             display: flex;
-            justify-content: space-around; /* 等間隔の横並び */
-            width: 100%;
-            max-width: 600px; /* リンクが広がりすぎないように */
+            justify-content: center; /* 中央寄せ */
+            gap: 20px; /* リンク間の距離を近づけて等間隔 */
         }
         .nav-links a {
             font-size: 1em;
@@ -67,7 +66,7 @@
         .side-image {
             width: 100%;
             max-width: 400px; /* 700×700から縮小 */
-            margin: 0 auto; /* 余白内に収まる */
+            margin: 0 auto;
             animation: slideUp 1s ease-out forwards;
         }
         @keyframes slideUp {
@@ -82,14 +81,15 @@
         }
         .bottom-images {
             display: flex;
-            justify-content: space-around; /* 等間隔の横並び */
+            justify-content: center; /* 中央寄せ */
+            gap: 20px; /* 画像間の距離を近づける */
             margin: 80px 0 20px 0; /* 上部に大きめの余白 */
             width: 100%;
             max-width: 800px;
         }
         .bottom-images img {
-            width: 700px; /* 元のサイズ700×700に戻す */
-            max-width: 100%; /* コンテナを超えないように */
+            width: 400px; /* 大きくする（元の700pxから調整） */
+            max-width: 45%; /* コンテナに収まるように */
         }
 
         /* PC用 */
@@ -98,17 +98,19 @@
                 padding: 40px;
             }
             .nav-links {
-                margin-bottom: 100px; /* PCでさらに余白を増やす */
+                margin-bottom: 100px;
+                gap: 30px; /* PCでは少し広めに */
             }
             .side-image {
                 max-width: 400px;
             }
             .bottom-images {
-                margin-top: 100px; /* PCでさらに余白を増やす */
+                margin-top: 100px;
+                gap: 30px; /* PCでは少し広めに */
             }
             .bottom-images img {
-                width: 700px; /* 元のサイズ */
-                max-width: 45%; /* 2つ並ぶように調整 */
+                width: 400px; /* 大きく表示 */
+                max-width: 45%;
             }
         }
 
@@ -118,24 +120,26 @@
                 padding: 10px;
             }
             .nav-links {
-                margin-bottom: 60px; /* スマホでも余白を確保 */
+                margin-bottom: 60px;
                 display: flex; /* 横並びを維持 */
-                justify-content: space-around;
+                justify-content: center; /* 中央寄せ */
+                gap: 15px; /* スマホではさらに近づける */
             }
             .nav-links a {
-                font-size: 0.9em; /* スマホで少し小さく */
+                font-size: 0.9em; /* 少し小さく */
             }
             .side-image {
-                max-width: 300px; /* スマホでさらに小さく */
+                max-width: 300px;
             }
             .bottom-images {
-                margin-top: 60px; /* スマホでも余白を確保 */
+                margin-top: 60px;
                 display: flex; /* 横並びを維持 */
-                justify-content: space-around;
+                justify-content: center; /* 中央寄せ */
+                gap: 10px; /* スマホではさらに近づける */
             }
             .bottom-images img {
-                width: 150px; /* スマホでは小さくして横に並ぶ */
-                max-width: 45%; /* 2つが収まるように */
+                width: 300px; /* スマホでも大きく */
+                max-width: 45%;
             }
         }
     </style>
