@@ -85,13 +85,13 @@
             justify-content: center;
             margin: 80px 0 20px 0;
             width: 100%;
-            max-width: 1024px; /* 背景画像の幅に合わせる */
+            max-width: 1024px;
         }
         .bottom-images img {
-            width: 100%; /* コンテナ幅をフルに活用 */
-            height: auto; /* アスペクト比を維持 */
-            max-width: 50%; /* 横に2つ並ぶ */
-            margin: 0; /* 隙間をなくす */
+            width: 100%;
+            height: auto;
+            max-width: 50%;
+            margin: 0;
         }
 
         /* PC用 */
@@ -102,18 +102,19 @@
             .nav-links {
                 margin-bottom: 100px;
                 justify-content: center;
-                gap: 10px;
-                max-width: 300px;
+                gap: 30px; /* 文字3つ分程度の隙間 */
+                max-width: 400px; /* 少し広げて調整 */
             }
             .side-image {
                 max-width: 400px;
+                margin-bottom: 10px; /* ボトム画像との距離を近づける */
             }
             .bottom-images {
-                margin-top: 100px;
+                margin-top: 0; /* サイド画像との隙間をほぼなくす */
             }
             .bottom-images img {
                 width: 100%;
-                max-width: 512px; /* 背景幅1024pxの半分で最大化 */
+                max-width: 450px; /* 512pxから少し小さく */
                 height: auto;
             }
         }
@@ -126,7 +127,9 @@
             .nav-links {
                 margin-bottom: 60px;
                 display: flex;
-                justify-content: space-around;
+                justify-content: center; /* 中央寄せ */
+                gap: 30px; /* 文字3つ分程度の隙間 */
+                max-width: 400px; /* 隙間を狭める */
             }
             .nav-links a {
                 font-size: 0.9em;
@@ -137,11 +140,11 @@
             .bottom-images {
                 margin-top: 60px;
                 display: flex;
-                justify-content: center;
+                justify-content: center; /* 中央寄せに修正 */
             }
             .bottom-images img {
                 width: 100%;
-                max-width: 45%; /* スマホでも横並びを維持しつつ大きく */
+                max-width: 450px; /* 前回の45%から3倍程度に拡大 */
                 height: auto;
             }
         }
