@@ -27,7 +27,9 @@
             padding: 20px;
             max-width: 800px;
             width: 100%;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .title-image {
             width: 50%;
@@ -35,17 +37,16 @@
             margin: 20px auto;
         }
         .text {
-            font-size: clamp(1.2em, 4vw, 1.5em); /* スマホでもPCでも適切なサイズ */
+            font-size: clamp(1.2em, 4vw, 1.5em);
             margin: 40px 0;
             text-align: center;
         }
         .nav-links {
-            text-align: left;
             margin: 20px 0;
         }
         .nav-links a {
             font-size: 1em;
-            margin-right: 20px;
+            margin: 0 15px;
             text-decoration: none;
         }
         .nav-links .top {
@@ -62,6 +63,7 @@
         }
         .side-image {
             width: 200px;
+            margin: 20px auto; /* 中央に配置 */
             animation: slideUp 1s ease-out forwards;
         }
         @keyframes slideUp {
@@ -77,47 +79,49 @@
         .bottom-images {
             display: flex;
             justify-content: space-around;
-            flex-wrap: wrap; /* スマホで画像が折り返す */
+            flex-wrap: wrap;
             margin: 20px 0;
             width: 100%;
             max-width: 800px;
         }
         .bottom-images img {
             width: 200px;
-            max-width: 45%; /* スマホで適切なサイズに */
+            max-width: 45%;
             margin: 10px;
         }
 
-        /* PC用のレイアウト */
+        /* PC用 */
         @media (min-width: 768px) {
             .content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .side-image {
-                position: absolute;
-                right: 20px;
-                top: 300px;
-            }
-            .nav-links {
-                text-align: center;
-            }
-        }
-
-        /* スマホ用のレイアウト */
-        @media (max-width: 767px) {
-            .side-image {
-                position: static; /* スマホでは通常のフローで表示 */
-                margin: 20px auto;
-                width: 150px; /* スマホでは少し小さく */
+                padding: 40px;
             }
             .nav-links {
                 text-align: center;
             }
             .nav-links a {
-                display: block; /* リンクを縦に並べる */
+                display: inline-block; /* 横並び */
+            }
+            .side-image {
+                width: 200px;
+                margin: 20px auto;
+            }
+        }
+
+        /* スマホ用 */
+        @media (max-width: 767px) {
+            .content {
+                padding: 10px;
+            }
+            .nav-links {
+                text-align: center;
+            }
+            .nav-links a {
+                display: block; /* 縦並び */
                 margin: 10px 0;
+            }
+            .side-image {
+                width: 150px; /* スマホで少し小さく */
+                margin: 20px auto;
             }
         }
     </style>
