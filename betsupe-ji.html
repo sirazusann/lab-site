@@ -42,11 +42,14 @@
             text-align: center;
         }
         .nav-links {
-            margin: 20px 0 60px 0; /* 下部に大きめの余白 */
+            margin: 20px 0 80px 0; /* 下部に大きめの余白 */
+            display: flex;
+            justify-content: space-around; /* 等間隔の横並び */
+            width: 100%;
+            max-width: 600px; /* リンクが広がりすぎないように */
         }
         .nav-links a {
             font-size: 1em;
-            margin: 0 15px;
             text-decoration: none;
         }
         .nav-links .top {
@@ -63,8 +66,8 @@
         }
         .side-image {
             width: 100%;
-            max-width: 400px; /* 700pxから縮小して余白に収まるように */
-            margin: 0 auto; /* 上下のマージンを0にして余白内に収める */
+            max-width: 400px; /* 700×700から縮小 */
+            margin: 0 auto; /* 余白内に収まる */
             animation: slideUp 1s ease-out forwards;
         }
         @keyframes slideUp {
@@ -79,15 +82,14 @@
         }
         .bottom-images {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 60px 0 20px 0; /* 上部に大きめの余白 */
+            justify-content: space-around; /* 等間隔の横並び */
+            margin: 80px 0 20px 0; /* 上部に大きめの余白 */
             width: 100%;
             max-width: 800px;
         }
         .bottom-images img {
-            width: 200px;
-            margin: 10px;
+            width: 700px; /* 元のサイズ700×700に戻す */
+            max-width: 100%; /* コンテナを超えないように */
         }
 
         /* PC用 */
@@ -96,20 +98,17 @@
                 padding: 40px;
             }
             .nav-links {
-                text-align: center;
-                margin-bottom: 80px; /* PCではさらに余白を増やす */
-            }
-            .nav-links a {
-                display: inline-block; /* 横並び */
+                margin-bottom: 100px; /* PCでさらに余白を増やす */
             }
             .side-image {
-                max-width: 400px; /* PCでも収まるサイズ */
+                max-width: 400px;
             }
             .bottom-images {
-                margin-top: 80px; /* PCではさらに余白を増やす */
+                margin-top: 100px; /* PCでさらに余白を増やす */
             }
             .bottom-images img {
-                width: 200px; /* 元のサイズ */
+                width: 700px; /* 元のサイズ */
+                max-width: 45%; /* 2つ並ぶように調整 */
             }
         }
 
@@ -119,22 +118,24 @@
                 padding: 10px;
             }
             .nav-links {
-                text-align: center;
-                margin-bottom: 40px; /* スマホでも余白を確保 */
+                margin-bottom: 60px; /* スマホでも余白を確保 */
+                display: flex; /* 横並びを維持 */
+                justify-content: space-around;
             }
             .nav-links a {
-                display: block; /* 縦並び */
-                margin: 10px 0;
+                font-size: 0.9em; /* スマホで少し小さく */
             }
             .side-image {
-                max-width: 300px; /* スマホではさらに小さく */
+                max-width: 300px; /* スマホでさらに小さく */
             }
             .bottom-images {
-                margin-top: 40px; /* スマホでも余白を確保 */
+                margin-top: 60px; /* スマホでも余白を確保 */
+                display: flex; /* 横並びを維持 */
+                justify-content: space-around;
             }
             .bottom-images img {
-                width: 150px; /* スマホでは少し小さく */
-                max-width: 45%;
+                width: 150px; /* スマホでは小さくして横に並ぶ */
+                max-width: 45%; /* 2つが収まるように */
             }
         }
     </style>
